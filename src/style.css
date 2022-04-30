@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/*---------Header Styling---------*/
+section {
+  padding: 0 8px 25px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.opening-header {
+  font-weight: 700;
+  font-size: 28px;
+  margin: 10px 20px 20px;
+}
+.opening-paragraph {
+  font-size: 16px;
+  margin: 20px 20px 20px;
+  line-height: 20px;
+}
+
+/*----------Table Stying----------*/
+
+.main {
+  margin: 5rem;
+}
+
+.table {
+  background-color: #f4f4f4;
+  margin: 10px auto;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.267);
+  -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+  filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+}
+
+.table-header {
+  font-size: 17px;
+  height: 90px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.table-decimal {
+  font-size: 16px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+}
+
+/*------------Button Styling------------*/
+.add-btn {
+  font-size: 15px;
+  margin: 0px 25px 40px;
+  display: inline-block;
+  background: rgb(0, 183, 255);
+  color: #fff;
+  border: solid rgb(0, 183, 255) 1px;
+  padding: 10px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: inherit;
+}
+.add-btn:hover {
+  background: rgb(215, 244, 255);
+  color: rgb(0, 0, 0);
+  border: solid rgb(0, 183, 255) 1px;
+}
+
+.info-btn {
+  font-size: 17px;
+  background-color: #f4f4f4;
+  padding: 8px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.info-btn:hover {
+  background: rgb(0, 183, 255);
+  color: #fff;
+}
+
+.edit-btn {
+  background: rgb(0, 253, 169);
+  font-size: 15px;
+  margin: 10px auto 10px;
+  display: inline-block;
+  border: solid rgb(0, 253, 169) 1px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.edit-btn:hover {
+  background: rgb(173, 255, 228);
+}
+
+.delete-btn {
+  background: #dc3545;
+  border-radius: 10px;
+  font-size: 15px;
+  margin: 10px auto 10px;
+  display: inline-block;
+  border: solid #dc3545 1px;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.delete-btn:hover {
+  color: black;
+  background: #db6a75;
+}
+
+.cancel-btn {
+  font-size: 15px;
+  margin: 30px 0 5px;
+  width: 100%;
+  display: inline-block;
+  background: #0d6efd;
+  color: #fff;
+  border: solid #0d6efd 1px;
+  padding: 12px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.cancel-btn:hover {
+  color: black;
+  background: #4e95ff;
+}
+
+.submit-btn {
+  font-size: 15px;
+  margin: 30px 0 5px;
+  width: 100%;
+  display: inline-block;
+  background: #30b400;
+  color: #fff;
+  border: solid #30b400 1px;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.submit-btn:hover {
+  color: black;
+  background: #82fc55;
+}
+/*------------ Info, Add, and Edit Table Stying------------*/
+
+.container {
+  max-width: 600px;
+  margin: 30px auto;
+  overflow: auto;
+  min-height: 300px;
+  border: 1px solid steelblue;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.info-container {
+  max-width: 700px;
+  margin: 30px auto;
+  overflow: auto;
+  min-height: 300px;
+  border: 1px solid steelblue;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.action-header {
+  height: 70px;
+  margin: 10px 0 15px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.info-header {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 100px;
+}
+
+.form-control {
+  margin: 20px 0;
+}
+
+.label {
+  display: block;
+  font-size: 24px;
+  margin: 15px 0 20px;
+  font-weight: 600;
+}
+
+.sub-label {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.form-control-input {
+  width: 100%;
+  height: 40px;
+  margin: 2px 0 20px;
+  padding: 3px 7px;
+  font-size: 17px;
+}
+
+.form-control-description {
+  width: 100%;
+  height: 100px;
+  margin: 2px 0 10px;
+  padding: 3px 7px;
+  font-size: 17px;
+  font-family: 'Inter', sans-serif;
+}
+
+.form-control-quantity {
+  width: 15%;
+  height: 30px;
+  margin: 2px 0 50px;
+  padding: 3px 7px;
+  font-size: 17px;
+}
+
+.info-p {
+  padding-bottom: 30px;
+  font-size: 20px;
+}
+
+.info-cost {
+  margin: 10px 50px 60px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.mcost-info-table {
+  margin: 0 0 60px;
+  width: 85%;
+}
+
+.lcost-info-table {
+  margin: 0 0 60px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.info-table-header {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.table-decimal-info {
+  font-size: 18px;
+  height: 25px;
+  line-height: 10px;
+  text-align: center;
+}
+
+.total-table {
+  margin: 0 auto 30px auto;
+}
+
+.total-table > thead > tr > th {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.total-table > tbody > tr > td {
+  font-size: 21px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
+}
+
+/*--- Screen Adjustments for smaller laptops ---*/
+
+@media screen and (max-width: 1024px) {
+  .main {
+    margin: 2rem;
+  }
+
+  .table-header {
+    font-size: 14px;
+    height: 60px;
+    line-height: 20px;
+    text-align: center;
+  }
+  .table-decimal {
+    font-size: 14px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+  }
+
+  .add-btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+  .info-btn {
+    font-size: 14px;
+    padding: 4px 8px;
+    margin: 5px auto;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    font-size: 12px;
+    padding: 7px 9px;
+    margin: 5px auto;
+  }
+}
+
+/*--- Screen Adjustments for tablets ---*/
+
+@media screen and (max-width: 768px) {
+  .main {
+    margin: 1.5rem;
+  }
+
+  .opening-header {
+    font-weight: 700;
+    font-size: 25px;
+    margin: 20px 20px 20px;
+  }
+  .opening-paragraph {
+    font-size: 13px;
+    margin: 20px 20px 20px;
+  }
+
+  .table-header {
+    font-size: 11px;
+    height: 60px;
+    line-height: 20px;
+    text-align: center;
+  }
+  .table-decimal {
+    font-size: 11px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+  }
+
+  .add-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .info-btn {
+    font-size: 12px;
+    padding: 4px 8px;
+    margin: 5px auto;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    font-size: 11px;
+    padding: 4px 8px;
+    margin: 5px auto;
+  }
+}
