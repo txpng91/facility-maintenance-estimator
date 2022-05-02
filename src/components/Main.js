@@ -246,7 +246,7 @@ function Main() {
                     </button>
                   </Link>
                 </td>
-                {/* Using thr deleted function passing the id of an entry */}
+                {/* Using the deleted function passing the id upon clicking */}
                 <td>
                   <button
                     className='delete-btn'
