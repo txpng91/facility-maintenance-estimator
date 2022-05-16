@@ -43,36 +43,35 @@ function CreateTask() {
     }
 
     //Empty space or add a 0 to any optional variables (description & products 2 to 4) if left emptied
-    else if (!document.getElementById('description').value) {
+    if (!document.getElementById('description').value) {
       document.getElementById('description').value = ' ';
-      return;
-    } else if (!document.getElementById('product2-name').value) {
+    }
+    if (!document.getElementById('product2-name').value) {
       document.getElementById('product2-name').value = ' ';
-      return;
-    } else if (!document.getElementById('product2-amount').value) {
-      document.getElementById('product2-amount').value = '0';
-      return;
-    } else if (!document.getElementById('product2-quantity').value) {
+    }
+    if (!document.getElementById('product2-amount').value) {
+      document.getElementById('product2-amount').value = 0;
+    }
+    if (!document.getElementById('product2-quantity').value) {
       document.getElementById('product2-quantity').value = 0;
-      return;
-    } else if (!document.getElementById('product3-name').value) {
+    }
+    if (!document.getElementById('product3-name').value) {
       document.getElementById('product3-name').value = ' ';
-      return;
-    } else if (!document.getElementById('product3-amount').value) {
-      document.getElementById('product3-amount').value = '0';
-      return;
-    } else if (!document.getElementById('product3-quantity').value) {
+    }
+    if (!document.getElementById('product3-amount').value) {
+      document.getElementById('product3-amount').value = 0;
+    }
+    if (!document.getElementById('product3-quantity').value) {
       document.getElementById('product3-quantity').value = 0;
-      return;
-    } else if (!document.getElementById('product4-name').value) {
+    }
+    if (!document.getElementById('product4-name').value) {
       document.getElementById('product4-name').value = ' ';
-      return;
-    } else if (!document.getElementById('product4-amount').value) {
-      document.getElementById('product4-amount').value = '0';
-      return;
-    } else if (!document.getElementById('product4-quantity').value) {
+    }
+    if (!document.getElementById('product4-amount').value) {
+      document.getElementById('product4-amount').value = 0;
+    }
+    if (!document.getElementById('product4-quantity').value) {
       document.getElementById('product4-quantity').value = 0;
-      return;
     }
 
     const ids = uuid(); // Creating unique id

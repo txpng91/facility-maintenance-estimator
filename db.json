@@ -49,6 +49,31 @@
       "All_Inclusive_Cost": "$106.45",
       "Total_Estimate": "$3,651.89",
       "id": "f37f2eb0"
+    },
+    {
+      "Maintenance_Task": "New Task",
+      "Date": "2022-05-13",
+      "Description": " This is a test",
+      "Material_Cost": "$1,476.96",
+      "Product_1_Name": "Product One",
+      "Product_1_Amount": "$234.45",
+      "Product_1_Quantity": "6",
+      "Product_2_Name": " Product Two",
+      "Product_2_Amount": "$23.42",
+      "Product_2_Quantity": "3",
+      "Product_3_Name": " ",
+      "Product_3_Amount": "$0.00",
+      "Product_3_Quantity": "0",
+      "Product_4_Name": " ",
+      "Product_4_Amount": "$0.00",
+      "Product_4_Quantity": "0",
+      "Labor_Cost": "$373.44",
+      "Employee_Rate": "$23.34",
+      "Hours_Needed": "4",
+      "Employee_Amount": "4",
+      "All_Inclusive_Cost": "$204.35",
+      "Total_Estimate": "$2,054.75",
+      "id": "ce26da5b"
     }
   ]
 }
