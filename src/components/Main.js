@@ -32,6 +32,7 @@ function Main() {
     lQuantity,
     aCost
   ) => {
+    //Used localstorage for storing a value and using the values in other pages
     localStorage.setItem('id', id);
     localStorage.setItem('Maintenance_Task', maintenancetask);
     localStorage.setItem('Date', date);
@@ -80,6 +81,7 @@ function Main() {
     aCost,
     mCost
   ) => {
+    //Used localstorage for storing a value and using the values in other pages
     localStorage.setItem('id', id);
     localStorage.setItem('Maintenance_Task', maintenancetask);
     localStorage.setItem('Date', date);

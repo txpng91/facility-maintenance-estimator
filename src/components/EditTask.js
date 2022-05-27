@@ -198,6 +198,7 @@ function EditTask() {
 
   // useEffect will let the page render only once with the captured data
   useEffect(() => {
+    //Used localstorage to get the values in Main pages
     setTask(localStorage.getItem('Maintenance_Task'));
     setDate(localStorage.getItem('Date'));
     setDesc(localStorage.getItem('Description'));
