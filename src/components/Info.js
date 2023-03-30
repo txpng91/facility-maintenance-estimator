@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 function Info() {
@@ -77,29 +76,25 @@ function Info() {
 
   return (
     <div className='info-container'>
-      <section className='info-section'>
-        <header className='info-header'>
-          <h1>Maintenance Information</h1>
-        </header>
-        <main>
-          <section>
-            <h2 className='label'>Maintenance Title</h2>
-            <p className='info-p'>{maintenancetask}</p>
-            <h2 className='label'>Date</h2>
-            <p className='info-p'>{date}</p>
-            <h2 className='label'>Description</h2>
-            <p className='info-p'>{desc}</p>
-          </section>
-        </main>
-      </section>
-      <section className='info-section'>
-        <header className=''>
+      <header>
+        <h1>Maintenance Information</h1>
+        <section>
+          <h2 className='label'>Maintenance Title</h2>
+          <p className='info-p'>{maintenancetask}</p>
+          <h2 className='label'>Date</h2>
+          <p className='info-p'>{date}</p>
+          <h2 className='label'>Description</h2>
+          <p className='info-description'>{desc}</p>
+        </section>
+      </header>
+      <main>
+        <header>
           <h1>Cost Information</h1>
         </header>
         <main>
           <section className='cost-section'>
             <header>
-              <h2>Material Cost</h2>
+              <h2>Material Costs</h2>
               <p className='info-cost'>{mCost}</p>
             </header>
             <table className='cost-table'>
@@ -134,41 +129,41 @@ function Info() {
               </tbody>
             </table>
           </section>
-          {/* Labor cost */}
           <section className='cost-section'>
             <header>
-              <h2>Labor Cost</h2>
+              <h2>Labor Costs</h2>
               <p className='info-cost'>{lCost}</p>
             </header>
-
             <table className='cost-table'>
               <thead>
                 <tr>
-                  <th className='info-table-header'>Hourly Rate</th>
-                  <th className='info-table-header'>Time Required</th>
-                  <th className='info-table-header'>Employees</th>
+                  <th className='info-table-header'>Rate</th>
+                  <th className='info-table-header'>Hourse</th>
+                  <th className='info-table-header'>Quantity</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td className='table-decimal-info'>{lAParse}</td>
-                  <td className='table-decimal-info'>{lHourly} hrs</td>
+                  <td className='table-decimal-info'>{lHourly}</td>
                   <td className='table-decimal-info'>{lQuantity}</td>
                 </tr>
               </tbody>
             </table>
           </section>
-          <h2>All Inclusive Costs</h2>
-          <p className='info-cost'>{aCost}</p>
+          <section className='other-cost-section'>
+            <h2>All Inclusive Costs</h2>
+            <p className='info-cost'>{aCost}</p>
+          </section>
         </main>
-        <footer className='footer'>
-          <h2>Total Estimate</h2>
-          <p>{tEstimate}</p>
-        </footer>
-      </section>
-      <Link to='/'>
-        <Button className='cancel-btn'>Return</Button>
-      </Link>
+      </main>
+      <footer className='footer'>
+        <h2>Total Estimate</h2>
+        <p>{tEstimate}</p>
+        <Link to='/'>
+          <button className='cancel-btn'>Return</button>
+        </Link>
+      </footer>
     </div>
   );
 }
