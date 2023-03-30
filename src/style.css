@@ -123,9 +123,10 @@ body {
 
 .cancel-btn {
   font-size: 15px;
-  margin: 30px 0 5px;
-  width: 100%;
-  display: inline-block;
+  display: block;
+  margin: 0 auto 0 auto;
+  width: 20%;
+  height: 10%;
   background: #0d6efd;
   color: #fff;
   border: solid #0d6efd 1px;
@@ -166,9 +167,8 @@ body {
 
 .container {
   max-width: 600px;
-  margin: 30px auto;
+  margin: 10px auto;
   overflow: auto;
-  min-height: 300px;
   border: 1px solid steelblue;
   padding: 30px;
   border-radius: 5px;
@@ -176,18 +176,42 @@ body {
 
 .info-container {
   margin: 50px auto 0 auto;
-  width: 80%;
-  height: 200px;
+  height: fit-content;
   border: solid 1px rgb(0, 0, 0);
   border-radius: 10px;
-  padding: 40px;
-  block-size: fit-content;
+  padding: 20px;
+  display: flex;
+}
+
+.info-container > header {
+  padding: 0 10px 0 10px;
+  width: 30%;
+}
+
+.info-container > main {
+  width: 40%;
+}
+
+.info-container > footer {
+  width: 30%;
+  margin: 75px auto 0 auto;
+}
+
+.info-p {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+.info-description {
+  width: 80%;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .cost-section {
   position: relative;
   display: flex;
-  padding: 30px 0 30px 0;
+  padding-bottom: 20px;
 }
 
 .cost-section > header {
@@ -196,13 +220,14 @@ body {
 
 .cost-section > header > h2,
 .cost-section > header > p {
-  text-align: center;
   margin-top: 12px;
+  line-height: 8px;
 }
 
 .cost-table {
-  width: 65%;
   margin: 0 auto 0 auto;
+  width: 65%;
+  display: table-column;
 }
 
 .cost-table > thead {
@@ -210,9 +235,13 @@ body {
   font-size: 1.5rem;
 }
 
+.info-table-header {
+  padding: 0 30px 0 30px;
+}
+
 .table-decimal-info {
-  font-size: 18px;
-  line-height: 10px;
+  font-size: 20px;
+  line-height: 25px;
   text-align: center;
 }
 
@@ -221,12 +250,6 @@ body {
   margin: 10px 0 15px;
   font-size: 28px;
   font-weight: 600;
-}
-
-.info-header {
-  font-weight: 600;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 
 .form-control {
@@ -267,22 +290,10 @@ body {
   font-size: 17px;
 }
 
-.info-p {
-  padding-bottom: 30px;
-  padding-bottom: 30px;
-  font-size: 20px;
-}
-
 .info-cost {
-  margin: 10px 50px 60px;
+  padding: 15px;
   font-size: 20px;
   font-weight: 600;
-}
-
-.lcost-info-table {
-  margin: 0 0 60px;
-  width: 100%;
-  border-radius: 5px;
 }
 
 .footer > h2 {
@@ -298,6 +309,63 @@ body {
 /*--- Screen Adjustments for smaller laptops ---*/
 
 @media screen and (max-width: 1024px) {
+  .info-container {
+    margin: 50px auto 0 auto;
+    width: 80%;
+    border: solid 1px rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 40px;
+    height: fit-content;
+    display: block;
+  }
+
+  .cost-section {
+    position: relative;
+    display: flex;
+    padding: 30px 0 30px 0;
+    width: 450px;
+  }
+
+  .cost-section > header {
+    width: 40%;
+  }
+
+  .cost-section > header > h2,
+  .cost-section > header > p {
+    text-align: center;
+    margin-top: 5px;
+    line-height: 1.5rem;
+  }
+
+  .cost-table {
+    width: 65%;
+    margin: 0 auto 0 auto;
+  }
+
+  .cost-table > thead {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  .table-decimal-info {
+    font-size: 18px;
+    line-height: 1.2rem;
+    text-align: center;
+  }
+
+  .action-header {
+    height: 70px;
+    margin: 10px 0 15px;
+    font-size: 28px;
+    font-weight: 600;
+  }
+
+  .info-header {
+    font-weight: 600;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
   .main {
     margin: 2rem;
   }
@@ -331,11 +399,39 @@ body {
     padding: 7px 9px;
     margin: 5px auto;
   }
+
+  .cancel-btn {
+    width: 80%;
+    height: 10%;
+    padding: 12px 10px;
+  }
 }
 
 /*--- Screen Adjustments for tablets ---*/
 
 @media screen and (max-width: 768px) {
+  .info-container {
+    margin: 50px auto 0 auto;
+    width: 90%;
+    height: fit-content;
+    border: solid 1px rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .info-container > header {
+    width: 100%;
+  }
+
+  .info-container > main {
+    width: fit-content;
+  }
+
+  .other-cost-section {
+    text-align: center;
+    width: 35%;
+  }
+
   .main {
     margin: 1.5rem;
   }
@@ -379,5 +475,28 @@ body {
     font-size: 11px;
     padding: 4px 8px;
     margin: 5px auto;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .info-container {
+    width: 520px;
+    height: fit-content;
+    border: solid 1px rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .info-container > header {
+    width: 100%;
+    padding: 0;
+  }
+
+  .cost-table {
+    width: 100%;
+  }
+
+  .info-container > footer {
+    margin: 20px auto 0 auto;
   }
 }
