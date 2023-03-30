@@ -225,7 +225,7 @@ function CreateTask() {
         </Form.Group>
 
         {/* Fetching a value from input in material costs*/}
-        <label className='label'>Material Costs</label>
+        <h2>Material Costs</h2>
         <label className='sub-label'>Product 1</label>
         <Form.Group>
           <Form.Control
@@ -363,7 +363,7 @@ function CreateTask() {
         </Form.Group>
 
         {/* Fetching a value from input in labor costs*/}
-        <label className='label'>Labor Costs</label>
+        <h2>Labor Costs</h2>
         <label>Hourly Rate</label>
         <Form.Group>
           <Form.Control

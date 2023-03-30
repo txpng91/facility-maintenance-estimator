@@ -77,78 +77,95 @@ function Info() {
 
   return (
     <div className='info-container'>
-      <label className='info-header'>Maintenance Information</label>
-      <label className='label'>Maintenance Title</label>
-      <p className='info-p'>{maintenancetask}</p>
-      <label className='label'>Date</label>
-      <p className='info-p'>{date}</p>
-      <label className='label'>Description</label>
-      <p className='info-p'>{desc}</p>
-      <label className='label'>Material Cost</label>
-      <p className='info-cost'>{mCost}</p>
-      <table className='mcost-info-table'>
-        <thead className='table-head'>
-          <tr>
-            <th className='info-table-header'>Products</th>
-            <th className='info-table-header'>Price</th>
-            <th className='info-table-header'>Quantity</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr className='table-row'>
-            <td className='table-decimal-info'>{p1Name}</td>
-            <td className='table-decimal-info'>{p1Parse}</td>
-            <td className='table-decimal-info'>{p1Quantity}</td>
-          </tr>
-          <tr className='table-row'>
-            <td className='table-decimal-info'>{p2Name}</td>
-            <td className='table-decimal-info'>{p2Parse}</td>
-            <td className='table-decimal-info'>{p2Quantity}</td>
-          </tr>
-          <tr className='table-row'>
-            <td className='table-decimal-info'>{p3Name}</td>
-            <td className='table-decimal-info'>{p3Parse}</td>
-            <td className='table-decimal-info'>{p3Quantity}</td>
-          </tr>
-          <tr className='table-row'>
-            <td className='table-decimal-info'>{p4Name}</td>
-            <td className='table-decimal-info'>{p4Parse}</td>
-            <td className='table-decimal-info'>{p4Quantity}</td>
-          </tr>
-        </tbody>
-      </table>
-      <label className='label'>Labor Cost</label>
-      <p className='info-cost'>{lCost}</p>
-      <table className='lcost-info-table'>
-        <thead className='table-head'>
-          <tr className='table-row'>
-            <th className='info-table-header'>Hourly Rate</th>
-            <th className='info-table-header'>Time Required</th>
-            <th className='info-table-header'>Number of Employees</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr className='table-row'>
-            <td className='table-decimal-info'>{lAParse}</td>
-            <td className='table-decimal-info'>{lHourly} hrs</td>
-            <td className='table-decimal-info'>{lQuantity}</td>
-          </tr>
-        </tbody>
-      </table>
-      <label className='label'>All Inclusive Costs</label>
-      <p className='info-cost'>{aCost}</p>
-      <table className='total-table'>
-        <thead>
-          <tr>
-            <th>Total Estimate</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>{tEstimate}</td>
-          </tr>
-        </tbody>
-      </table>
+      <section className='info-section'>
+        <header className='info-header'>
+          <h1>Maintenance Information</h1>
+        </header>
+        <main>
+          <section>
+            <h2 className='label'>Maintenance Title</h2>
+            <p className='info-p'>{maintenancetask}</p>
+            <h2 className='label'>Date</h2>
+            <p className='info-p'>{date}</p>
+            <h2 className='label'>Description</h2>
+            <p className='info-p'>{desc}</p>
+          </section>
+        </main>
+      </section>
+      <section className='info-section'>
+        <header className=''>
+          <h1>Cost Information</h1>
+        </header>
+        <main>
+          <section className='cost-section'>
+            <header>
+              <h2>Material Cost</h2>
+              <p className='info-cost'>{mCost}</p>
+            </header>
+            <table className='cost-table'>
+              <thead>
+                <tr>
+                  <th className='info-table-header'>Products</th>
+                  <th className='info-table-header'>Price</th>
+                  <th className='info-table-header'>Quantity</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className='table-decimal-info'>{p1Name}</td>
+                  <td className='table-decimal-info'>{p1Parse}</td>
+                  <td className='table-decimal-info'>{p1Quantity}</td>
+                </tr>
+                <tr>
+                  <td className='table-decimal-info'>{p2Name}</td>
+                  <td className='table-decimal-info'>{p2Parse}</td>
+                  <td className='table-decimal-info'>{p2Quantity}</td>
+                </tr>
+                <tr>
+                  <td className='table-decimal-info'>{p3Name}</td>
+                  <td className='table-decimal-info'>{p3Parse}</td>
+                  <td className='table-decimal-info'>{p3Quantity}</td>
+                </tr>
+                <tr>
+                  <td className='table-decimal-info'>{p4Name}</td>
+                  <td className='table-decimal-info'>{p4Parse}</td>
+                  <td className='table-decimal-info'>{p4Quantity}</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          {/* Labor cost */}
+          <section className='cost-section'>
+            <header>
+              <h2>Labor Cost</h2>
+              <p className='info-cost'>{lCost}</p>
+            </header>
+
+            <table className='cost-table'>
+              <thead>
+                <tr>
+                  <th className='info-table-header'>Hourly Rate</th>
+                  <th className='info-table-header'>Time Required</th>
+                  <th className='info-table-header'>Employees</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className='table-decimal-info'>{lAParse}</td>
+                  <td className='table-decimal-info'>{lHourly} hrs</td>
+                  <td className='table-decimal-info'>{lQuantity}</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <h2>All Inclusive Costs</h2>
+          <p className='info-cost'>{aCost}</p>
+        </main>
+        <footer className='footer'>
+          <h2>Total Estimate</h2>
+          <p>{tEstimate}</p>
+        </footer>
+      </section>
       <Link to='/'>
         <Button className='cancel-btn'>Return</Button>
       </Link>
